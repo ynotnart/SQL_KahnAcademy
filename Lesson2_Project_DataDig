@@ -3,7 +3,7 @@
 https://www.khanacademy.org/computing/computer-programming/sql/more-advanced-sql-queries/pp/project-data-dig
 */
 
-
+/*Source: ChatGPT*/
 /* Put your data in here and query it! */
 /* Source: http://www.boxofficemojo.com/alltime/world/ */
 CREATE TABLE topmovies(
@@ -172,4 +172,5 @@ WHERE Title LIKE '%Pirates%' OR Title LIKE '%Harry Potter%';
 
 /*Top 10 grossing movies*/
 SELECT * FROM topmovies ORDER BY Worldwide DESC LIMIT 10;
+
 

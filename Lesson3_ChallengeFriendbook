@@ -6,7 +6,6 @@ Tony Tran
 
 */
 
-
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fullname TEXT,
@@ -57,8 +56,11 @@ FROM persons
 JOIN hobbies
   ON persons.id = hobbies.person_id;
 
-SELECT a.fullname, b.fullname From persons
+
+SELECT a.fullname AS person1, b.fullname AS person2
+FROM friends
 JOIN persons a
-ON persons.id = a.id
+  ON friends.person1_id = a.id
 JOIN persons b
-ON persons.id = b.id;
+  ON friends.person2_id = b.id;
+
